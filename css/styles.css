@@ -1,0 +1,46 @@
+:root {
+  --text-color: white;
+  --common-color-red: rgb(190, 49, 68);
+}
+
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+.nav-container {
+  height: 45px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--common-color-red);
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+#navbar ul {
+  display: flex;
+  gap: 1.5rem;
+  margin-right: 34px;
+}
+
+#navbar ul li {
+  list-style-type: none;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
