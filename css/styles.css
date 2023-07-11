@@ -2,7 +2,7 @@
 
 
 :root {
-  --text-color: white;
+  --common-white-color: white;
   --common-red-color: rgb(190, 49, 68);
   --common-black-color: rgb(49, 51, 54);
   --common-blue-color: rgb(69, 86, 125);
@@ -20,7 +20,7 @@ html {
 body {
   width: 100vw;
   min-height: 100vh;
-  background-color: var(--text-color);
+  background-color: var(--common-white-color);
   overflow-x: hidden;
 }
 
@@ -52,7 +52,7 @@ body {
 
 #navbar ul li a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--common-white-color);
   font-family: 'Poppins', sans-serif;
   font-size: 20.50px;
   padding: 19px;
@@ -64,14 +64,17 @@ body {
 
 #welcome-section {
   height: 481px;
-  background-color: var(--common-black-color);
+  background: linear-gradient(90deg,
+      rgb(74, 74, 75) 0%,
+      rgb(39, 40, 42) 50%,
+      rgb(55, 57, 60));
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 #welcome-section h1 {
-  color: var(--text-color);
+  color: var(--common-white-color);
   font-family: 'Raleway', sans-serif;
   font-size: 48px;
   font-weight: 700;
@@ -83,4 +86,22 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 28px;
   font-weight: 200;
+}
+
+
+#projects {
+  background-color: var(--common-blue-color);
+  padding: 93px 19px;
+}
+
+#projects h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 39px;
+  font-weight: 700;
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 10px auto;
+  padding-bottom: 4px;
+  color: var(--common-white-color);
+  border-bottom: 2px solid var(--common-white-color);
 }
