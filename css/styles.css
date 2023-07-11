@@ -105,3 +105,11 @@ body {
   color: var(--common-white-color);
   border-bottom: 2px solid var(--common-white-color);
 }
+
+.project-tile {
+  text-decoration: none;
+}
+
+.project-title {
+  color: var(--common-white-color);
+}
