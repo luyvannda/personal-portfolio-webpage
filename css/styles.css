@@ -100,7 +100,7 @@ body {
   font-weight: 700;
   text-align: center;
   max-width: 620px;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 38px auto;
   padding-bottom: 4px;
   color: var(--common-white-color);
   border-bottom: 2px solid var(--common-white-color);
@@ -108,9 +108,9 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template: 1fr 1fr
-    / 1fr 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-right: 20px;
 }
 
 
@@ -119,11 +119,28 @@ body {
 }
 
 .project-image {
-  height: calc(100% - 6rem);
+  height: calc(100% - 5.5rem);
   width: 100%;
   object-fit: cover;
 }
 
 .project-title {
   color: var(--common-white-color);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16.2px;
+  text-align: center;
+  background-color: var(--common-black-color);
+  padding: 19px 5px;
+  margin-top: -4px;
+}
+
+.symbol {
+  visibility: hidden;
+  color: orange;
+  transition: linear 0.5s color 0.5s ease-in-out;
+}
+
+.project:hover .symbol {
+  visibility: visible;
+  transition-delay: 0.3s;
 }
