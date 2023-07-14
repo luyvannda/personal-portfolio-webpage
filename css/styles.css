@@ -12,21 +12,18 @@
   padding: 0;
 }
 
-
 html {
   box-sizing: border-box;
 }
 
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 
 body {
-  width: 100vw;
+  width: 100vw !important;
   min-height: 100vh;
   background-color: var(--common-white-color);
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -40,11 +37,17 @@ body {
   justify-content: flex-end;
   align-items: center;
   background-color: var(--common-red-color);
-  width: 100%;
+  width: 100vw;
   height: 65.68px;
   position: fixed;
   top: 0;
   z-index: 2;
+}
+
+@media screen and (max-width:620px) {
+  #navbar {
+    justify-content: center;
+  }
 }
 
 #navbar ul {
@@ -70,6 +73,7 @@ body {
 
 #welcome-section {
   height: 481px;
+  width: 100vw;
   background: linear-gradient(90deg,
       rgb(74, 74, 75) 0%,
       rgb(39, 40, 42) 50%,
@@ -105,9 +109,9 @@ body {
   }
 }
 
-@media screen and (max-width: 572px) {
+@media screen and (max-width: 620px) {
   #welcome-section h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   #welcome-section i {
@@ -115,13 +119,25 @@ body {
   }
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 500px) {
   #welcome-section h1 {
-    font-size: 18px;
+    font-size: 24px;
   }
 }
 
 
+@media screen and (max-width: 400px) {
+  #welcome-section h1 {
+    font-size: 20px;
+  }
+}
+
+
+@media screen and (max-width: 330px) {
+  #welcome-section h1 {
+    font-size: 18px;
+  }
+}
 
 
 #projects {
@@ -147,6 +163,11 @@ body {
   gap: 30px;
 }
 
+@media screen and (max-width: 499px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
 
 .project-tile {
   text-decoration: none;
